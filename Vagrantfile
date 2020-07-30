@@ -7,18 +7,9 @@ VAGRANTFILE_API_VERSION = "2"
 
 # Require YAML module
 require 'yaml'
-# check existency of YAML file and Read them with their box details. 
-# if File.exist?("secrets/mysec.yaml")
-#   #credentials = YAML::load(File.open('secrets/mysec.yaml'))
-#   credentials = YAML.load_file(File.join(File.dirname(__FILE__), 'secrets/mysec.yaml'))
-#   #config.vm.provision :shell, :inline => "echo 'Acquire::http::Proxy \"http://#{proxy['user']}:#{proxy['pass']}@proxy.corp.com:3210\";' >> /etc/apt/apt.conf"
-# end
 
 if File.exist?("nodes/nodes.yaml")
-  # check existency of YAML file and Read them with their box details. 
-  #credentials = YAML::load(File.open('secrets/mysec.yaml'))
   nodes_config = YAML.load_file(File.join(File.dirname(__FILE__), 'nodes/nodes.yaml'))
-  #config.vm.provision :shell, :inline => "echo 'Acquire::http::Proxy \"http://#{proxy['user']}:#{proxy['pass']}@proxy.corp.com:3210\";' >> /etc/apt/apt.conf"
 end
 
 
