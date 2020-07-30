@@ -1,0 +1,8 @@
+mysec.*
+sandbox
+*.orig
+*sandbox
+*.code-workspace
+.vagrant/
+.vscode/
+*.log

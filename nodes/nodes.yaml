@@ -1,0 +1,25 @@
+nodes:
+  - name: master.puppetvincelabs.com
+    ":ip": 192.168.56.15
+    ports:
+    - ":host": 80
+      ":guest": 80
+      ":id": http
+    ":memory": 2608
+    ":bootstrap": scripts/bootstrap-master.sh
+  - name: node01.puppetvincelabs.com
+    ":ip": 192.168.56.25
+    ports:
+    - ":host": 81
+      ":guest": 80
+      ":id": http
+    ":memory": 512
+    ":bootstrap": scripts/bootstrap-agent.sh
+  - name: node02.puppetvincelabs.com
+    ":ip": 192.168.56.35
+    ports:
+    - ":host": 82
+      ":guest": 80
+      ":id": http
+    ":memory": 512
+    ":bootstrap": scripts/bootstrap-agent.sh
